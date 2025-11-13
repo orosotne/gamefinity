@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth scroll for in-page anchors */
+/* Prevent horizontal scroll on mobile */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 /* Base theme */
@@ -15,6 +18,14 @@ html {
 body {
   background-color: var(--bg);
   color: rgb(241 245 249); /* slate-100 */
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Ensure all main containers respect viewport width */
+body > * {
+  max-width: 100vw;
 }
 
 /* Subtle selection color */

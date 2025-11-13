@@ -27,8 +27,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-bg antialiased`}>
+    <html lang="en" className="overflow-x-hidden">
+      <body className={`${inter.className} overflow-x-hidden bg-bg antialiased`}>
         {/* Background spotlight */}
         <div className="pointer-events-none fixed inset-0 bg-spotlight" />
         {children}
